@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: javatomcat-app
-        image: "abhilashnarayan/my-app-1.0:latest"
+        image: "abhilashnarayan/my-app-1.0"
         ports:
           - containerPort: 3000
 ---
