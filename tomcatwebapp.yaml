@@ -36,24 +36,3 @@ spec:
     targetPort: 3000
     port: 80
     
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: nginx-ingress
-  namespace: default
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
-spec:
-  rules:
-  - host: javatomcat.testdomainname.gq 
-    http:
-      paths:
-      - backend:
-          service:
-            name: javatomcat-app
-            port:
-              number: 80
-        path: /
-        pathType: Prefix
